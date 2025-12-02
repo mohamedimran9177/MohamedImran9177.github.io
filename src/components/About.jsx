@@ -14,6 +14,7 @@ const About = () => {
                     About Me
                 </h2>
 
+
                 <div className="glass-panel" style={{ lineHeight: '1.8', fontSize: '1.1rem', color: '#e0e0e0' }}>
                     <p style={{ marginBottom: '1.5rem' }}>
                         Aspiring Project Manager with 3+ years of experience bridging the gap between technology and business outcomes.

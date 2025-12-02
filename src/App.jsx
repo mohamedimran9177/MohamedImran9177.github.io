@@ -7,6 +7,8 @@ import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
 
+
+
 function App() {
   return (
     <div className="app-container">
