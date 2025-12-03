@@ -4,12 +4,21 @@ import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
     return (
-        <footer style={{ padding: '4rem 20px', textAlign: 'center', background: 'rgba(0,0,0,0.5)', marginTop: '4rem' }}>
+        <footer style={{
+            minHeight: '100vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '4rem 20px',
+            textAlign: 'center',
+            background: 'rgba(0,0,0,0.5)'
+        }}>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                style={{ maxWidth: '1000px', width: '100%' }}
             >
                 <h2 className="neon-text" style={{ fontSize: '2rem', marginBottom: '2rem' }}>
                     Get In Touch

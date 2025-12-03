@@ -3,12 +3,19 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <section style={{ padding: '4rem 20px', maxWidth: '1000px', margin: '0 auto' }}>
+        <section style={{
+            minHeight: '100vh',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '4rem 20px'
+        }}>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
+                style={{ maxWidth: '1000px', width: '100%' }}
             >
                 <h2 className="neon-text" style={{ fontSize: '2.5rem', marginBottom: '2rem', textAlign: 'center' }}>
                     About Me
