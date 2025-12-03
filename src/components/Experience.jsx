@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa';
 
 const experiences = [
     {
         company: 'Tericsoft',
+        companyUrl: 'https://www.tericsoft.com/',
         role: 'Back End Developer',
         period: 'Apr 2023 - Present',
         duration: '2 yrs 9 mos',
@@ -20,6 +21,7 @@ const experiences = [
     },
     {
         company: 'Bintix',
+        companyUrl: 'https://bintix.com/',
         role: 'Back End Developer',
         period: 'Sep 2022 - Mar 2023',
         duration: '7 mos',
@@ -68,7 +70,27 @@ const Experience = () => {
                                 {exp.role}
                             </h3>
                             <h4 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>
-                                {exp.company}
+                                {exp.companyUrl ? (
+                                    <a
+                                        href={exp.companyUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                            color: 'var(--primary-color)',
+                                            textDecoration: 'none',
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: '0.5rem',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onMouseOver={(e) => { e.currentTarget.style.textShadow = '0 0 8px var(--primary-color)'; }}
+                                        onMouseOut={(e) => { e.currentTarget.style.textShadow = 'none'; }}
+                                    >
+                                        {exp.company} <FaExternalLinkAlt style={{ fontSize: '1rem' }} />
+                                    </a>
+                                ) : (
+                                    exp.company
+                                )}
                             </h4>
 
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '1.5rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>

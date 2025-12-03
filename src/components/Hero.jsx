@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaPhone, FaFileDownload } from 'react-icons/fa';
 
 const Hero = () => {
     return (
@@ -58,6 +58,36 @@ const Hero = () => {
                 <a href="tel:+919177434891" className="social-icon" style={{ fontSize: '2rem', color: '#fff' }}><FaPhone /></a>
             </motion.div>
 
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                style={{ marginTop: '2rem' }}
+            >
+                <a
+                    href="/MohamedImran.pdf"
+                    download="MohamedImran_Resume.pdf"
+                    className="resume-btn"
+                    style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        padding: '0.8rem 1.5rem',
+                        background: 'transparent',
+                        border: '2px solid var(--primary-color)',
+                        color: 'var(--primary-color)',
+                        borderRadius: '50px',
+                        textDecoration: 'none',
+                        fontSize: '1.1rem',
+                        fontWeight: 'bold',
+                        transition: 'all 0.3s ease',
+                        cursor: 'pointer'
+                    }}
+                >
+                    <FaFileDownload /> Download Resume
+                </a>
+            </motion.div>
+
             <div style={{
                 position: 'absolute',
                 bottom: '2rem',
@@ -77,6 +107,12 @@ const Hero = () => {
         .social-icon:hover {
           color: var(--primary-color) !important;
           transform: scale(1.1);
+        }
+        .resume-btn:hover {
+            background: var(--primary-color) !important;
+            color: #000 !important;
+            box-shadow: 0 0 20px var(--primary-color);
+            transform: translateY(-3px);
         }
       `}</style>
         </section>
