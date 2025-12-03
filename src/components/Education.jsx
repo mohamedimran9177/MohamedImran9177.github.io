@@ -31,7 +31,7 @@ const Education = () => {
                 </div>
 
                 <div>
-                    <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>Bachelor of Technology - BTech</h3>
+                    <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem' }}>Bachelor of Technology - B.Tech</h3>
                     <h4 style={{ fontSize: '1.2rem', color: 'var(--primary-color)', marginBottom: '0.5rem' }}>
                         Lords Institute of Engineering & Technology
                     </h4>
