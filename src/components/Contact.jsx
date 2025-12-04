@@ -36,7 +36,7 @@ const Contact = () => {
 
                 <div style={{ borderTop: '1px solid var(--surface-border)', paddingTop: '2rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                     <p>&copy; {new Date().getFullYear()} Mohamed Imran. All rights reserved.</p>
-                    <p style={{ marginTop: '0.5rem' }}>Built with React & Vite</p>
+
                 </div>
             </motion.div>
         </footer>

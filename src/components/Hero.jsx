@@ -41,9 +41,8 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 style={{ maxWidth: '800px', margin: '0 auto', color: 'var(--text-muted)', fontSize: '1.1rem' }}
             >
-                <p>Healthcare IT · Waste Management · Agile Delivery</p>
-                <p style={{ marginTop: '0.5rem' }}>
-                    3+ Years Leading Cross-Functional Teams
+                <p style={{ lineHeight: '1.6' }}>
+                    Experienced in building scalable backend systems and leading cross-functional teams to deliver high-impact products, with a growing focus on project management to strengthen alignment between technology, business objectives, and stakeholder success.
                 </p>
             </motion.div>
 
