@@ -57,9 +57,8 @@ const Navbar = () => {
                 whileTap={{ scale: 0.9 }}
                 style={{
                     position: 'fixed',
-                    left: '20px',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
+                    right: '20px',
+                    bottom: '20px',
                     zIndex: 1001,
                     background: 'rgba(20, 20, 30, 0.8)',
                     backdropFilter: 'blur(15px)',
@@ -91,9 +90,9 @@ const Navbar = () => {
                         onMouseLeave={() => setIsOpen(false)}
                         style={{
                             position: 'fixed',
-                            left: '80px', // Positioned next to the toggle button
-                            top: '50%',
-                            transform: 'translateY(-50%)',
+                            right: '20px', // align with hamburger button
+                            bottom: '80px', // appear above the button
+                            // transform removed
                             zIndex: 1000,
                             display: 'flex',
                             flexDirection: 'column',
