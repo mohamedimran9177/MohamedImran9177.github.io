@@ -103,12 +103,7 @@ const Skills = () => {
                     <h2 className="neon-text" style={{
                         fontSize: '2.5rem',
                         marginBottom: '1rem',
-                        textAlign: 'center',
-                        background: 'linear-gradient(90deg, #00f0ff, #bc13fe, #00f0ff)',
-                        backgroundSize: '200% auto',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        animation: 'gradient-shift 3s ease infinite'
+                        textAlign: 'center'
                     }}>
                         Skills & Expertise
                     </h2>
@@ -122,9 +117,8 @@ const Skills = () => {
                     </p>
                 </motion.div>
 
-                <div style={{
+                <div className="skills-grid" style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
                     gap: '2rem'
                 }}>
                     {skillCategories.map((category, index) => {
@@ -143,16 +137,16 @@ const Skills = () => {
                                 style={{
                                     position: 'relative',
                                     background: isHovered
-                                        ? `linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(188, 19, 254, 0.1))`
+                                        ? `linear-gradient(135deg, rgba(0, 240, 255, 0.05), rgba(188, 19, 254, 0.05))`
                                         : 'rgba(255, 255, 255, 0.03)',
                                     backdropFilter: 'blur(10px)',
-                                    border: `2px solid ${isHovered ? category.color : 'rgba(255, 255, 255, 0.1)'}`,
+                                    border: `2px solid ${isHovered ? category.color + '80' : 'rgba(255, 255, 255, 0.1)'}`,
                                     borderRadius: '20px',
                                     padding: '2rem',
                                     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                                     transform: isHovered ? 'translateY(-10px) scale(1.02)' : 'translateY(0) scale(1)',
                                     boxShadow: isHovered
-                                        ? `0 20px 60px ${category.color}40, 0 0 40px ${category.color}30`
+                                        ? `0 15px 40px ${category.color}20, 0 0 30px ${category.color}10`
                                         : '0 8px 32px rgba(0, 0, 0, 0.3)',
                                     cursor: 'pointer',
                                     overflow: 'hidden'
@@ -273,6 +267,14 @@ const Skills = () => {
             </div>
 
             <style>{`
+                .skills-grid {
+                    grid-template-columns: 1fr;
+                }
+                @media (min-width: 768px) {
+                    .skills-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
                 @keyframes gradient-shift {
                     0%, 100% { background-position: 0% 50%; }
                     50% { background-position: 100% 50%; }
